@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url('/static/1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+        }
+
+        .home-page h1 {
+            color: #4CAF50;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .burger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .burger-icon:hover {
+            background-color: #45a049;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 999;
+            color: white;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .sidebar button {
+            width: 200px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .sidebar button:hover {
+            background-color: #f9fff9;
+        }
+
+        .welcome-container {
+            max-width: 800px;
+            margin: 10% auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(253, 255, 253, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-container h1 {
+            color: #14ee08;
+            font-size: 36px;
+            margin: 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="home-page">
+    <!-- Burger icon -->
+    <div class="burger-icon" onclick="toggleSidebar()">☰</div>
+    
+    <!-- Side navigation (hidden by default) -->
+    <div id="sidebar" class="sidebar">
+        <nav>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/signup'">Sign-up</button>
+            <button onclick="location.href='/signin'">Log-in</button>
+            <button onclick="location.href='/products'">Fruits</button>
+        </nav>
+    </div>
+
+    <!-- Welcome Message Container -->
+    <div class="welcome-container">
+        <h1>Welcome to Fruitshop Management Systems</h1>
+    </div>
+
+    <!-- Sidebar toggle script -->
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

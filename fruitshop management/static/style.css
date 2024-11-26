@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+body.home-page {
+    background-image: url('/static/background.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%; 
+}
+
+h1 {
+    text-align: center;
+    color: #f1ebe8;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ff9d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Burger icon styling */
+.burger-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Sidebar styling (hidden by default) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide sidebar off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: 0.3s; /* Smooth transition */
+    padding-top: 60px;
+    z-index: 9; /* Ensure sidebar is above other content */
+}
+
+/* Sidebar navigation styling */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar nav button {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Open sidebar when clicked */
+.sidebar.open {
+    left: 0;
+}
+body.landing-page {
+    background-image: url('/static/background.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%; }
